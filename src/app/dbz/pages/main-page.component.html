@@ -1,0 +1,18 @@
+<h1>DBZ Main page</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+  <!--  <dbz-list [characterList] ="dbzService.characters" (onDeleteID)="dbzService.onDeleteCharacter($event)"></dbz-list>-->
+    <!-- <dbz-list [characterList] ="dbzService.characters" (onDeleteById)="dbzService.onDeleteById($event)"></dbz-list> asi cuando el servicio era publico -->
+    <dbz-list [characterList] ="characters" (onDeleteById)="onDeleteById($event)"></dbz-list>
+
+
+  </div>
+
+  <div class="col">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+
+</div>
